@@ -38,6 +38,7 @@
       .lead { max-width:570px; color:var(--muted); font-size:1.05rem; }
       .cta-row { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
       .button { display:inline-block; margin-top:18px; padding:13px 16px; background:var(--purple); color:#fff; font-weight:800; font-size:.88rem; } .button:hover { color:#fff; background:var(--coral); }
+      .button.large { padding:19px 26px; font-size:1.05rem; }
       .button.ghost { background:transparent; color:var(--purple); border:1px solid var(--purple); } .button.ghost:hover { color:var(--coral); background:transparent; border-color:var(--coral); }
       .character { display:block; width:100%; max-height:620px; object-fit:contain; filter:drop-shadow(11px 13px 0 #ffcfbc); }
       section { padding:80px 0; border-top:1px solid var(--line); }
@@ -93,7 +94,8 @@
             <h1>Systems that <em>ship.</em><br />Teams that move.</h1>
             <p class="lead">I’m Mohamed Emir Hajji, a senior software engineer who builds dependable backend, cloud, and AI systems. I enjoy turning complicated software into useful products that people can trust.</p>
             <div class="cta-row">
-              <a class="button" id="mail-hero" href="#">Email Emir →</a>
+              <a class="button large" id="mail-hero" href="#">Email Emir →</a>
+              <a class="button ghost large" href="https://www.linkedin.com/in/mohamedemirhajji" target="_blank" rel="noreferrer">LinkedIn ↗</a>
             </div>
           </div>
           <img class="character" src="hero-character.webp" alt="Illustrated portrait of Mohamed Emir Hajji holding a laptop" width="700" height="1050" fetchpriority="high" />
@@ -178,7 +180,7 @@
         </section>
 
         <section id="contact" class="cta">
-          <div><div class="eyebrow">Available for interesting problems</div><h2>Let’s make<br />something useful.</h2><a class="button" id="mail-contact" href="#">Email me →</a></div>
+          <div><div class="eyebrow">Available for interesting problems</div><h2>Let’s make<br />something useful.</h2><div class="cta-row"><a class="button large" id="mail-contact" href="#">Email Emir →</a><a class="button ghost large" href="https://www.linkedin.com/in/mohamedemirhajji" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div>
           <img class="character" src="character-contact.webp" alt="Illustrated Mohamed Emir Hajji waving beside a small rocket" width="700" height="1050" loading="lazy" />
         </section>
       </main>
@@ -251,7 +253,6 @@
           var el = document.getElementById(id);
           if (!el) return;
           el.href = 'mailto:' + addr;
-          if (id === 'mail-contact') el.textContent = addr + ' →';
         });
       })();
     </script>
